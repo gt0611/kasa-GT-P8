@@ -2,7 +2,7 @@
 const Banner = ({ img, children }) => {
   return (
     <section className="hero-header">
-      <img src={img} alt="" />
+      <img className="hero-header_img" src={img} alt={img} />
       {children}
     </section>
   );

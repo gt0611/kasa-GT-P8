@@ -8,7 +8,7 @@ const Logement = () => {
   const [logement, setLogement] = useState();
   const { id } = useParams();
   const navigate = useNavigate();
-  const btnTags = logement.tags;
+  const tags = logement.tags;
 
   useEffect(() => {
     /*fonction asynchrome pour récupérer le fichier logement.json*/
@@ -37,10 +37,15 @@ const Logement = () => {
               <h1>{logement.title}</h1>
               <p>{logement.location}</p>
             </div>
-            <div className="logements-description"></div>
-            {btnTags.map((btnTag, index) => {
-              return <button key={(btnTag, index)}>{btnTag}</button>;
-            })}
+            <div className="logements-description">
+              {tags.map((tag, index) => {
+                return (
+                  <button key={(tag, index)}>
+                    <p>{tag}</p>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </main>
       )}

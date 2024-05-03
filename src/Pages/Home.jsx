@@ -19,8 +19,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="page-home">
       <Header />
+      <br />
       <Banner img={ImgBanner}>
         <h1>Chez vous, partout et ailleurs</h1>
       </Banner>

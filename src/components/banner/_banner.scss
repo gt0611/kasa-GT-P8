@@ -5,17 +5,21 @@
   justify-content: center;
   opacity: 0.6;
   position: relative;
-  > h1 {
+  h1 {
     position: absolute;
     color: white;
-    top: 70px;
     font-size: 60px;
+    margin: 0;
+    top: 30%;
   }
-
   &_img {
     border-radius: 25px;
     filter: brightness(50%);
     width: 100%;
     object-fit: cover;
+    border-radius: 25px;
+    opacity: 0.6;
+    background: #000;
+    mix-blend-mode: darken;
   }
 }

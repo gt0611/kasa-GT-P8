@@ -1,0 +1,30 @@
+.collaspe {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgba(246, 246, 246, 0.45);
+  flex-wrap: nowrap;
+  &-header {
+    background-color: #ff6060;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 20px 10px 10px;
+    cursor: pointer;
+  }
+  &-content {
+    &_visible {
+      display: block;
+      text-align: start;
+
+      ul {
+        list-style: none;
+      }
+    }
+    &_hidden {
+      display: none;
+    }
+  }
+}

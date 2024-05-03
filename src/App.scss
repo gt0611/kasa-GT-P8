@@ -2,15 +2,19 @@
 @import "./components/banner/banner";
 @import "./components/thumb/thumb";
 @import "./components/footer/footer";
+@import "./components/carousel/carrousel";
+@import "./components/tag/tag";
+@import "./components/collaspe/collaspe";
+@import "./components/host/host.scss";
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
 a {
@@ -30,4 +34,117 @@ a {
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 50px;
+}
+
+.carrousel {
+  &img {
+    height: 415px;
+  }
+}
+
+.page-home {
+  display: inline-flex;
+  padding-top: 45px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.page-logement {
+  display: flex;
+  flex-direction: column;
+  padding-top: 45px;
+  align-items: center;
+  gap: 50px;
+  &-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.page-about {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+  &-main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  &-collaspe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+}
+
+.logements {
+  display: flex;
+  flex-direction: column;
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    h1 {
+      color: #ff6060;
+      margin-bottom: 0;
+    }
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    &-tag {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  &-collaspe {
+    display: flex;
+    gap: 72px;
+  }
+  &-stars-rating {
+    &_1 {
+      color: #ff6060;
+      text-shadow: 0px 0px 5px rgb(180, 166, 166);
+    }
+    &_2 {
+      color: #e3e3e3;
+    }
+  }
+}
+
+.page-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  gap: 139px;
+  &-content {
+    h1 {
+      color: #ff6060;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 288px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 142.6%;
+      margin: 0;
+    }
+    p {
+      color: #ff6060;
+      font-family: Montserrat;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%; /* 51.336px */
+      margin: 0;
+    }
+  }
 }

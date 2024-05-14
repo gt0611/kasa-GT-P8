@@ -31,4 +31,14 @@
     text-align: center;
     text-shadow: 0px 0px 5px black;
   }
+  @media (max-width: 767px) {
+    height: 255px;
+    &-arrow-left,
+    &-arrow-right {
+      height: 24px;
+    }
+    p {
+      display: none;
+    }
+  }
 }

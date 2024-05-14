@@ -2,7 +2,7 @@ const Tag = ({ tag }) => {
   return (
     <div>
       <button className="tag">
-        <p>{tag}</p>
+        <span>{tag}</span>
       </button>
     </div>
   );

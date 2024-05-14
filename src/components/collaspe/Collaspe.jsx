@@ -1,5 +1,4 @@
 import arrowUp from "../../assets/arrowUp.svg";
-import arrowDown from "../../assets/arrowDown.svg";
 import { useState } from "react";
 
 const Collaspe = ({ title, children }) => {
@@ -9,7 +8,6 @@ const Collaspe = ({ title, children }) => {
     setContentVisible(!contentVisible); // inverse la valeur actuelle
   };
 
-  const collapseArrows = contentVisible ? arrowUp : arrowDown;
   const collapseContent = contentVisible
     ? "collaspe-content_visible"
     : "collaspe-content_hidden";
@@ -18,7 +16,11 @@ const Collaspe = ({ title, children }) => {
     <div className="collaspe">
       <div className="collaspe-header" onClick={showContent}>
         <span>{title}</span>
-        <img src={collapseArrows} alt={collapseArrows} />
+        <img
+          className={contentVisible ? "rotate arrow" : "arrow"}
+          src={arrowUp}
+          alt="flèche"
+        />
       </div>
       <div className={collapseContent}>{children}</div>
     </div>

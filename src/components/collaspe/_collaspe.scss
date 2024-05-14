@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     color: white;
+    font-weight: 700;
     padding: 10px 20px 10px 10px;
     cursor: pointer;
   }
@@ -18,13 +19,32 @@
     &_visible {
       display: block;
       text-align: start;
+      padding: 0 15px;
 
       ul {
         list-style: none;
+        padding: 0;
       }
     }
     &_hidden {
       display: none;
     }
+  }
+  @media (max-width: 475px) {
+    &-header {
+      padding: 0 10px 0 10px;
+      font-size: 13px;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  transition: transform 0.5s ease;
+  @media (max-width: 475px) {
+    height: 25px;
   }
 }

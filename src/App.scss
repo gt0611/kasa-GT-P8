@@ -8,6 +8,12 @@
 @import "./components/host/host.scss";
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -34,6 +40,14 @@ a {
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 50px;
+  @media (max-width: 767px) {
+    background: none;
+    grid-row-gap: 15px;
+  }
+  @media (max-width: 475px) {
+    padding: 0;
+    margin-top: 0;
+  }
 }
 
 .carrousel {
@@ -48,6 +62,16 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  @media (min-width: 768px) and (max-width: 1024px) {
+  }
+
+  @media (max-width: 767px) {
+    display: inline-flex;
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 27px;
+    width: 100%;
+  }
 }
 
 .page-logement {
@@ -60,6 +84,14 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 20px;
+    gap: 27px;
+    width: 100%;
   }
 }
 
@@ -80,6 +112,13 @@ a {
     width: 100%;
     gap: 30px;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    gap: 19px;
+  }
 }
 
 .logements {
@@ -99,11 +138,20 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    &-host {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
     margin-bottom: 30px;
     &-tag {
       display: flex;
       gap: 10px;
     }
+  }
+  &-stars-rating {
+    display: flex;
+    gap: 5px;
   }
   &-collaspe {
     display: flex;
@@ -113,9 +161,52 @@ a {
     &_1 {
       color: #ff6060;
       text-shadow: 0px 0px 5px rgb(180, 166, 166);
+      font-size: 21px;
     }
     &_2 {
       color: #e3e3e3;
+      font-size: 21px;
+    }
+  }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+    }
+    p {
+      font-size: 14px;
+    }
+    &-info {
+      flex-direction: column;
+      align-items: start;
+
+      &-host {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+      }
+    }
+    &-collaspe {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-stars-rating {
+      &_1,
+      &_2 {
+        font-size: 13px;
+      }
+    }
+  }
+  @media (max-width: 475px) {
+    h1 {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%; /* 19.964px */
+      text-align: left;
     }
   }
 }
@@ -145,6 +236,32 @@ a {
       font-weight: 500;
       line-height: 142.6%; /* 51.336px */
       margin: 0;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 20px;
+    &-content {
+      h1 {
+        color: #ff6060;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 142.6%; /* 136.896px */
+      }
+      p {
+        color: #ff6060;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 25.668px */
+      }
     }
   }
 }

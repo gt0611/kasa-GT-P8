@@ -6,22 +6,44 @@
   border-radius: 10px;
   color: white;
   position: relative;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.6%;
+
   &_img {
     object-fit: cover;
     height: 340px;
     border-radius: 10px;
     width: 100%;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(10, 10, 10, 0) 42%,
-      rgba(4, 4, 4, 0.2) 99.99%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
+  }
+
+  .background {
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), transparent);
   }
   h2 {
-    position: absolute;
-    top: 65%;
-    left: 5%;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-row-gap: 20px;
+    &_img {
+      height: 255px;
+    }
+    h2 {
+      font-size: 18px;
+      top: 200px;
+    }
   }
 }

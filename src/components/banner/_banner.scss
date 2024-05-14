@@ -1,11 +1,11 @@
 .hero-header {
   height: 223px;
-  border-radius: 25px;
   display: flex;
   justify-content: center;
-  opacity: 0.6;
   position: relative;
+
   h1 {
+    display: flex;
     position: absolute;
     color: white;
     font-size: 60px;
@@ -14,12 +14,19 @@
   }
   &_img {
     border-radius: 25px;
-    filter: brightness(50%);
     width: 100%;
     object-fit: cover;
-    border-radius: 25px;
-    opacity: 0.6;
-    background: #000;
-    mix-blend-mode: darken;
+    filter: brightness(35%);
+  }
+  @media (max-width: 768px) {
+    height: 110px;
+    h1 {
+      font-size: 25px;
+      text-align: left;
+      padding-left: 10px;
+    }
+    &_img {
+      border-radius: 10px;
+    }
   }
 }

@@ -21,16 +21,21 @@ const Carousel = ({ pictures }) => {
   return (
     <div className="carrousel">
       <img className="carrousel-img" src={pictures[index]} alt="" />
-      <img
-        className="carrousel-arrow-left"
-        src={arrowleft}
-        onClick={goLeft}
-      ></img>
-      <img
-        className="carrousel-arrow-right"
-        src={arrowright}
-        onClick={goRight}
-      ></img>
+      {totalPictures > 0 && (
+        <>
+          <img
+            className="carrousel-arrow-left"
+            src={arrowleft}
+            onClick={goLeft}
+          ></img>
+          <img
+            className="carrousel-arrow-right"
+            src={arrowright}
+            onClick={goRight}
+          ></img>
+        </>
+      )}
+
       {totalPictures > 0 && (
         <div className="counter-img">
           <p className="counter-img_p">

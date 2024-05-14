@@ -46,7 +46,7 @@ const Logement = () => {
                   <Tag tag={tag} key={tag + index} />
                 ))}
               </div>
-              <div className="logement-info-host">
+              <div className="logements-info-host">
                 <Host
                   name={logement.host.name}
                   picture={logement.host.picture}
@@ -74,7 +74,7 @@ const Logement = () => {
               <Collaspe title="Description">
                 <p>{logement.description}</p>
               </Collaspe>
-              <Collaspe title={"Equipements"}>
+              <Collaspe title={"Équipements"}>
                 <ul>
                   {logement.equipments.map((equipment, index) => (
                     <li key={equipment + index}>{equipment}</li>

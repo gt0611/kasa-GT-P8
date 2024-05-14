@@ -1,15 +1,23 @@
 import { NavLink } from "react-router-dom";
 import lOGO from "../../assets/LOGO.svg";
 const Header = () => {
+  const linkIsActive = { textDecoration: "underline" };
+
   return (
     <header className="navigation">
-      <img src={lOGO} alt="logo kasa" />
+      <img className="navigation-img" src={lOGO} alt="logo kasa" />
       <ul className="navigation_link">
-        <NavLink to={"/"}>
-          <li>Acceuil</li>
+        <NavLink
+          style={({ isActive }) => (isActive ? linkIsActive : undefined)}
+          to={"/"}
+        >
+          <li>ACCEUIL</li>
         </NavLink>
-        <NavLink to={"/about"}>
-          <li>A Propos</li>
+        <NavLink
+          style={({ isActive }) => (isActive ? linkIsActive : undefined)}
+          to={"/about"}
+        >
+          <li>A PROPOS</li>
         </NavLink>
       </ul>
     </header>
